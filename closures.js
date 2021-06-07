@@ -19,10 +19,10 @@ function outer() {
   
 /* 
   Above you're given a function that returns another function which has a closure over the name variable.
-  Invoke outer saving the return value into another variable called 'inner'.
+  Invoke outer saving then return value into another variable called 'inner'.
 */
   
-// Code Here
+//ANSWER
 
 
 

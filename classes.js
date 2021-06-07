@@ -29,7 +29,19 @@
   Call your class Employee and receive all the data in the constructor in the order listed above.
 */
 
-//Code Here
+//ANSWER
+
+class Employee {
+  constructor (firstName, lastName, email, age){
+    this.firstName = firstName
+    this.lastName = lastName
+    this.email = email
+    this.age = age
+  }
+  makeWidget(){
+    return '${this.firstName} ${this.lastName} Widget';
+  }
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -47,15 +59,36 @@
   Call your new class Manager
 */
 
-//Code Here
+//ANSWER
 
+class Manager extends Employee {
+  constructor(firstName, lastName, email, age, reports, hire, fire){
+  super(firstName, lastName, email, age)
+  this.reports = [];
+  this.hire = (Employee);
+  this.fire = 0;
+  }
+
+  newEmployee(){
+    super.newEmployee();
+    this.hire.push(reports)
+    return '${firstName} ${lastName} added to reports'
+  }
+
+  fire(){
+    super.fire();
+    for (var i = 0; i < reports.length; i++);
+    delete this.reports(Employee[i])
+    return '${firstName} ${lastName} removed from reports'
+  }
+}
 
 ////////// PROBLEM 3 //////////
 
 /*
   Managers for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
   create a class ProgressiveManager that extends Manager.  A Progressive Manager has all of the same properties as a manager with the following additional properties:
-    - title - default 'Not a manager'
+    - title - default 'Not a manager' 
     - bonus - default 0
 
   When employees are hired or fired, the manager's title should be updated based on the number of reports.
@@ -71,9 +104,16 @@
   Call your new class ProgressiveManager
 */
 
-//Code Here
+//ANSWER
 
+class ProgressiveManager extends Manager {
+  super(firstName, lastName, email, age, reports, hire, fire){
+  this.title = title;
+  this.bonus = bonus;
+  }
 
+  
+}
 
 ////////// PROBLEM 4 - Black Diamond //////////
 
