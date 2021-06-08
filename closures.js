@@ -24,13 +24,13 @@ function outer() {
   
 //ANSWER
 
-
+let inner = outer();
 
 //Once you do that, invoke inner.
 
-//Code Here
+//ANSWER
 
-
+console.log(inner)
 
 ////////// PROBLEM 2 //////////
 
@@ -51,8 +51,9 @@ function callFriend(name) {
   (HINT: You will need to pass in arguments to both function invocations)
 */
 
-//Code Here
+//ANSWER
 
+let callJake = callFriend('Jake', 435-555-9248)
 
 
 ////////// PROBLEM 3 //////////
@@ -63,14 +64,14 @@ function callFriend(name) {
 
 //Code Here
 
-
+const makeCounter = count()
 
 //Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+   var count = makeCounter();
+   count(); // 1
+   count(); // 2
+   count(); // 3
+   count(); // 4
 
 
 
@@ -86,10 +87,21 @@ function callFriend(name) {
 */
 
 function counterFactory(value) {
-  // Code here.
+  let value = 0;
+
+  function inc(upOne){
+    value += upOne;
+    return value
+  }
+
+  function dec(downOne){
+    value -= downOne;
+    return value
+  }
 
   return {
-
+    inc,
+    dec,
   };
 }
 
