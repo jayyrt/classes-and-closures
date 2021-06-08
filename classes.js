@@ -112,7 +112,28 @@ class ProgressiveManager extends Manager {
   this.bonus = bonus;
   }
 
+  hire(){
+   var title = 'Not a manager';
+    if (i = 0, reports.length >= 2, i++){
+      return title = 'Barely Manager';
+    } else if (i = 0, reports.length >= 9, i++){
+      return title = 'Mostly Manager';
+    } else if (i = 0, reports.length >= 49, i++){
+      return title = 'Manager';
+    } else if (i = 0, reports.length >= 99, i++){
+      return title = 'Manager Plus';
+    } else {
+      return title = 'Bestest Manager';
+    }
+  }
   
+  fire(){
+    var bonus = 0;
+    return function(){
+      bonus++;
+      return bonus += 100;
+    }
+  }
 }
 
 ////////// PROBLEM 4 - Black Diamond //////////
@@ -138,6 +159,29 @@ class ProgressiveManager extends Manager {
         - The anonymous function should decrease wear_and_tear_count by 10, and set needs_reboot to false
 */
 
-//Code Here
+//ANSWER
 
+class Machine {
+  constructor(){
+    this.widgetsMadeCount = 0;
+    this.wearAndTearCount = 0;
+    this.needsReboot = false;
+  }
 
+  makeWidgets(num){
+    this.widgetsMadeCount += num;
+    for (i = 0, widgetsMadeCount.length[i] >= 49, i++)
+    return this.wearAndTearCount += 1;
+  }
+
+  fixMachine(){
+    return this.needsReboot = true;
+  }
+
+  reboot(){
+    return function(){
+      this.wearAndTearCount -= 10;
+      this.needsReboot = false
+    }
+  }
+}
